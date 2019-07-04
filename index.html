@@ -11,6 +11,7 @@
 		<p>
 			Cod. : {{ odata.id}}
 			Descripción: {{ odata.product }}
+			Cantidad : {{odata.quantity}}
 	    </p>
 		</div>
 	</div>
@@ -19,19 +20,6 @@
 		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-	<script>
-    var App = new Vue({
-        el: '#app',
-        data: {
-               orderData: [] 
-              },
-        mounted () {
-    	  var self = this; 
-    	  $.getJSON("orders.json", function(data) {
-    	  self.orderData = data.orders;
-          })
-        }
-})
-</script>
+ <script src="js/main.js"></script>
 </body>
 </html>
